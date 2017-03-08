@@ -1,9 +1,73 @@
 
+section {
+	width: 29%;
+	float: left;
+	margin: 2% 2%;
+	text-align: center;
+}
+
+
+
+h1#home {
+	text-align: center;
+}
+
+#map-container { height: 350px; }
+
+
+
+
+
+body,
+.jumbotron {
+
+	background: -webkit-linear-gradient(to left,#2d4c60, #46545e);
+	background: linear-gradient(to left,#2d4c60, #46545e);
+  color: #a59898;
+  
+}
+
+/*
+body {
+	background: #f0f0f0;
+	font: 14px/20px arial, sans-serif;
+	color: #555;
+	margin: 0;
+}
+*/
+nav {
+	float: right;
+	padding: 35px 20px 20px 0;
+}
+
+/*
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+}
+*/
+
+ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+}
+/*
 .carousel img {
   width:100% ;
   min-width:100 ;
   height: auto;
 }
+*/
+.carousel-inner  img {
+width: 100%; margin: 0 auto;
+	max-height: 700px;
+	border-radius: 20px;		
+	object-fit: contain;
+}
+
 
 .carousel-caption {
 	position: absolute;
@@ -14,7 +78,43 @@
   
 }
 
- body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
+/*
+#doc {
+	margin: 40px 0;
+}
+footer p, footer h3 {
+	color: #fff;
+}
+footer p a {
+	color: #fff;
+	text-decoration: none;
+}
+ul.social li {
+	display: inline;
+}
+ul.social li img {
+	height: 50px;
+}
+*/
+
+.main-footer {
+  background-color: rgb(44,55,59);
+  color: white;
+  padding: 20px 50px;
+}
+
+.main-footer ul li {
+  list-style-type: none;
+}
+
+.sub-footer {
+  background-color: rgb(32,40,41);
+  color: white;
+  padding: 20px 50px;
+}
+
+@media screen and (max-width: 478px) {
+	body {
+		position: absolute;
+	}
+}
