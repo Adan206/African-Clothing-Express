@@ -1,11 +1,18 @@
 
-$( document ).ready(function() {
+/* Begin by adding your on ready handler here, and then create the
+   rest of your functions inside the on ready handler.
+   (Note that you do not need to manually call Bootstrap functions in
+   your Javascript because Bootstrap will automatically recognize your
+   HTML structures and invoke the proper JS code accordingly. Be sure
+   to reference the Bootstrap documentation.)
+*/
+ $( document ).ready(function() {
    
 // TODO: Add 2 layers to your map you have visuals. Use the Open Street Maps
 // tiles served through the MapQuest CDN. Consult this example to set up
 // the map tiles layers:
 	 
-var satMap = L.tileLayer( 'https://api.mapbox.com/styles/v1/adan206/ciymd5pg900372skuzqah5sch/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbjIwNiIsImEiOiJjaXltY3RnenUwMDA0NDRwZjVmZWpva3ViIn0.WUxuHhqpda4t7xPQ_m73Dg', {
+var satMap = L.tileLayer( 'https://api.mapbox.com/styles/v1/adan206/cj0091hr9006t2rplxnp57yoo/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbjIwNiIsImEiOiJjaXltY3RnenUwMDA0NDRwZjVmZWpva3ViIn0.WUxuHhqpda4t7xPQ_m73Dg', {
   
  Attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
  
@@ -13,7 +20,7 @@ var satMap = L.tileLayer( 'https://api.mapbox.com/styles/v1/adan206/ciymd5pg9003
   
   });
    
- brightMap = L.tileLayer ('https://api.mapbox.com/styles/v1/adan206/ciys4fzxo00072rmafnqpzd9j/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbjIwNiIsImEiOiJjaXltY3RnenUwMDA0NDRwZjVmZWpva3ViIn0.WUxuHhqpda4t7xPQ_m73Dg', {
+ brightMap = L.tileLayer ('https://api.mapbox.com/styles/v1/adan206/cj0091hr9006t2rplxnp57yoo/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbjIwNiIsImEiOiJjaXltY3RnenUwMDA0NDRwZjVmZWpva3ViIn0.WUxuHhqpda4t7xPQ_m73Dg', {
    
   Attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
  
@@ -21,7 +28,7 @@ var satMap = L.tileLayer( 'https://api.mapbox.com/styles/v1/adan206/ciymd5pg9003
    
  });
    
- streetMap = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbjIwNiIsImEiOiJjaXltY3RnenUwMDA0NDRwZjVmZWpva3ViIn0.WUxuHhqpda4t7xPQ_m73Dg', {
+ streetMap = L.tileLayer('https://api.mapbox.com/styles/v1/adan206/cj0091hr9006t2rplxnp57yoo/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbjIwNiIsImEiOiJjaXltY3RnenUwMDA0NDRwZjVmZWpva3ViIn0.WUxuHhqpda4t7xPQ_m73Dg', {
    
  Attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
  
@@ -55,12 +62,12 @@ var oMaps = {
 
 //var mymap = L.map('map-container').setView([46.85, -121.78], 10);
 var myMap = L.map('map-container', {
-	center: [46.85, -121.78],
+	center: [47.4745, -122.2861],
 	zoom: 10,
-	layers: [satMap, IntLoc ]
+	layers: [satMap ]
 });
 
-L.control.layers(myMaps, oMaps ).addTo(myMap);
+L.control.layers(myMaps ).addTo(myMap);
  
 
 //stretch goals, use eventTrigger to properly link the tab links
@@ -75,13 +82,13 @@ L.control.layers(myMaps, oMaps ).addTo(myMap);
   
     if ($(eventTrigger).is(".description-btn")){
 
-     $('#descriptionTAB').tab('show');
+     $('#FeaturesTAB').tab('show');
       
     } else if($(eventTrigger).is(".history-btn")){
-       $('#historyTAB').tab('show');
+       $('#PremisesTAB').tab('show');
       
     }else{
-      $('#statsTAB').tab('show');
+      $('#ScheduleTAB').tab('show');
     }
     
 });
@@ -97,3 +104,4 @@ L.control.layers(myMaps, oMaps ).addTo(myMap);
  
  
  });
+
